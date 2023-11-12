@@ -1,0 +1,62 @@
+<html>
+    <head>
+
+        <title>Personal Web</title>
+        <link rel="stylesheet" href="asset/css/navbar.css">
+        <link rel="stylesheet" href="asset/css/contact.css">
+
+    </head>
+    <body>
+
+        <!-- Navbar Section -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-item">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="asset/img/brand.png" alt="">
+                    </a>
+    
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">My Project</a>
+                </div>
+
+                <div class="nav-contact">
+                    <a href="contact.html" class="btn-contact">Contact Me</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar Section End -->
+
+        <div class="form-container">
+            <h1>GET IN TOUCH</h1>
+            <form action="">
+
+                <label for="">Name</label>
+                <input type="text" class="input-form" id="name">
+                
+                <label for="">Email</label>
+                <input type="text" class="input-form" id="email">
+
+                <label for="">Phone Number</label>
+                <input type="text" class="input-form" id="phone">
+
+                <label for="">Subject</label>
+                <select name="" class="input-form" id="subject">
+                    <option value="Frontend Developer">Frontend Developer</option>
+                    <option value="Backend Developer">Backend Developer</option>
+                    <option value="Fullstack Developer">Fullstack Developer</option>
+                </select>
+
+                <label for="">Your Message</label>
+                <textarea name="" cols="30" rows="5" class="input-form" id="message"></textarea>
+                
+                <div class="submit">
+                    <input type="button" value="submit" class="btn-submit" onclick="Submit()">
+                </div>
+                
+            </form>
+        </div>
+        
+    </body>
+    <script src="asset/js/contact.js"></script>
+</html>

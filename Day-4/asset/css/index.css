@@ -1,0 +1,63 @@
+.big-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px;
+    margin: 90px 300px;
+    border-radius: 10px;
+}
+
+.big-card-child{
+    flex: 1;
+    padding: 50px;
+}
+
+.big-card-child .title{
+    margin-bottom: 20px;
+}
+
+.big-card-child .paragraf{
+    text-align: justify;
+}
+
+.link-card{
+    margin: 40px 0px;
+}
+
+.link-card .btn-contact{
+    background-color: rgb(36,36,36);
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: #fff;
+    margin-right: 30px;
+}
+
+.link-card .btn-download{
+    color: rgb(36,36,36);
+}
+
+.link-social{
+    color: rgb(36,36,36);
+    font-size: 35px;
+    margin-right: 20px;
+}
+
+.small-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 2px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.small-card img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.small-card .text{
+    text-align: center;
+    margin: 10px 0px;
+}

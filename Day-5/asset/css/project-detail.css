@@ -1,0 +1,61 @@
+.container {
+    max-width: 100%;
+    padding: 40px;
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.detail-blog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detail-blog .text-title{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.detail-blog .detail{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.detail-blog .left{
+    flex: 68%;
+}
+.left img{
+    width: 100%;
+    height: 400px;
+}
+.detail-blog .right{
+    flex: 28%;
+}
+
+.detail-blog .right-title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.detail-blog .right-desc{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.technologies .node{grid-area: node;}
+.technologies .react{grid-area: react;}
+.technologies .next{grid-area: next;}
+.technologies .type{grid-area: type;}
+.detail-blog .technologies{
+    display: grid;
+    grid-template-areas: 'node next' 'react type';
+    font-size: 25px;
+}
+
+.detail-blog .paragraf{
+    font-size: 20px;
+    text-align: justify;
+}
