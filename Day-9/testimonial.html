@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="asset/css/navbar.css" />
+    <link rel="stylesheet" href="asset/css/testimonial.css">
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-item">
+                <a href="index.html" class="navbar-brand">
+                    <img src="asset/img/brand.png" alt="" />
+                </a>
+                <div class="nav-collapse">
+                    <a href="index.html" class="nav-link">Home</a>
+                </div>
+                <div class="nav-collapse">
+                    <a href="project.html" class="nav-link">My Project</a>
+                </div>
+                <div class="nav-collapse">
+                    <a href="testimonial.html" class="nav-link">Testimonial</a>
+                </div>
+            </div>
+
+            <div class="nav-contact">
+                <a href="contact.html" class="btn-contact nav-collapse">Contact Me</a>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars fa-2x" id="hamburger-menu" onclick="toggleNav()"></i>
+    </nav>
+    <!-- Navbar Section End -->
+
+    <div class="nav-mobile" id="toggle-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="project.html">My Project</a>
+        <a href="contact.html">Contact</a>
+        <a href="testimonial.html">Testimonial</a>
+    </div>
+
+    <div class="container">
+        <h2>My Testimonial</h2>
+
+        <div class="rating">
+            <button class="btn-rating" onclick="allRating()">All</button>
+
+            <button class="btn-rating" onclick="filterRating(1)">
+                1 <i class="fa-solid fa-star"></i>
+            </button>
+
+            <button class="btn-rating" onclick="filterRating(2)">
+                2 <i class="fa-solid fa-star"></i>
+            </button>
+
+            <button class="btn-rating" onclick="filterRating(3)">
+                3 <i class="fa-solid fa-star"></i>
+            </button>
+
+            <button class="btn-rating" onclick="filterRating(4)">
+                4 <i class="fa-solid fa-star"></i>
+            </button>
+
+            <button class="btn-rating" onclick="filterRating(5)">
+                5 <i class="fa-solid fa-star"></i>
+            </button>
+        </div>
+
+        <div class="list-testimonial" id="content">
+
+        </div>
+    </div>
+</body>
+<script src="asset/js/navbar.js"></script>
+<script src="asset/js/ajax.js"></script>
+
+</html>

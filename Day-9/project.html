@@ -1,0 +1,116 @@
+<html>
+
+<head>
+
+    <title>Personal Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/navbar.css">
+    <link rel="stylesheet" href="asset/css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-item">
+                <a href="index.html" class="navbar-brand">
+                    <img src="asset/img/brand.png" alt="">
+                </a>
+                <div class="nav-collapse">
+                    <a href="index.html" class="nav-link">Home</a>
+                </div>
+                <div class="nav-collapse">
+                    <a href="project.html" class="nav-link">My Project</a>
+                </div>
+            </div>
+
+            <div class="nav-contact">
+                <a href="contact.html" class="btn-contact nav-collapse">Contact Me</a>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars fa-2x" id="hamburger-menu" onclick="toggleNav()"></i>
+    </nav>
+    <!-- Navbar Section End -->
+
+    <div class="nav-mobile" id="toggle-nav">
+        <a href="index.html">Home</a>
+        <a href="project.html" class="active">My Project</a>
+        <a href="">Contact</a>
+    </div>
+
+    <div class="form-container">
+        <h1>ADD MY PROJECT</h1>
+        <form onsubmit="addProject(event)">
+
+            <div>
+                <label for="" class="input-label">Project Name</label>
+                <input type="text" class="input-form" id="projectName">
+            </div>
+
+            <div class="date-group">
+                <div>
+                    <label for="" class="input-label">Start Date</label>
+                    <input type="date" class="input-form" id="startDate">
+                </div>
+                <div>
+                    <label for="" class="input-label">End Date</label>
+                    <input type="date" class="input-form" id="endDate">
+                </div>
+            </div>
+
+            <div>
+                <label for="" class="input-label">Description</label>
+                <textarea name="" cols="30" rows="5" class="input-form" id="description"></textarea>
+            </div>
+
+            <div>
+                <label for="" class="input-label">Technologies</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="" id="node" class="input-check"> <label for="">Node JS</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="" id="next" class="input-check"> <label for="">Next JS</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="" id="react" class="input-check"> <label for="">React JS</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="" id="typescript" class="input-check"> <label
+                            for="">Typescript</label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="" class="input-label">Upload Image</label>
+                <div class="input-image">
+                    <label for="inputImage">
+                        <p>Attach File</p>
+                        <i class="fa-solid fa-paperclip"></i>
+                    </label>
+                    <input type="file" name="" id="inputImage" hidden>
+                </div>
+            </div>
+
+            <div class="submit">
+                <input type="submit" value="submit" class="btn-submit">
+            </div>
+
+        </form>
+    </div>
+
+    <div class="blog">
+        <h1>My Project</h1>
+        <div class="blog-list" id="contents">
+        </div>
+    </div>
+</body>
+<script src="asset/js/project.js"></script>
+<script src="asset/js/navbar.js"></script>
+
+</html>
