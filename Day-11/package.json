@@ -1,0 +1,18 @@
+{
+  "name": "personalweb",
+  "version": "1.0.0",
+  "description": "Ini adalah web personal saya",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js"
+  },
+  "author": "Rengstone",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -156,11 +156,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .blog-list{
-        width: 100%;
-        grid-template-columns: auto;
-    }
-
     .form-container h1{
         font-size: 20px;
     }
@@ -175,5 +170,4 @@
     .form-container .input-form{
         font-size: 15px;
     }
-    
 }

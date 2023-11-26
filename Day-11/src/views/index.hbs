@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                <img src="/asset/img/brand.png" alt="" width="50px" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" aria-current="page" href="/project">Add
+                            Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" aria-current="page" href="/testimonial">Testimonal</a>
+                    </li>
+                </ul>
+
+                <a href="/contact" class="btn btn-dark px-3" style="border-radius: 20px;">contact me</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex justify-content-center my-5 mx-3">
+        <div class="card mb-3" style="max-width: 900px;">
+            <div class="d-flex row">
+                <div class="col">
+                    <div class="card-body">
+                        <h5 class="card-title">Welcome To my HUT</h5>
+                        <p class="card-text text-justify">Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Numquam suscipit reprehenderit
+                            fugit blanditiis? Nobis qui iusto nulla error natus corrupti!
+                        </p>
+                        <div class="d-flex align-items-center justify-content-around mb-4">
+                            <a href="#" class="btn btn-dark" style="border-radius: 20px; width: 100px;">contact</a>
+                            <a href="#" style="text-decoration: none;" class="text-dark"><i
+                                    class="fa-solid fa-download"></i>
+                                download CV</a>
+                        </div>
+                        <div class="d-flex justify-content-evenly">
+                            <a href="#"><i class="fs-1 fa-brands fa-linkedin text-dark"></i></a>
+                            <a href="#"><i class="fs-1 fa-brands fa-square-instagram text-dark"></i></a>
+                            <a href="#"><i class="fs-1 fa-brands fa-square-facebook text-dark"></i></a>
+                            <a href="#"><i class="fs-1 fa-brands fa-square-twitter text-dark"></i></a>
+                        </div>
+
+                        <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                    </div>
+                </div>
+                <div class="col m-3 d-flex align-items-center justify-content-center">
+                    <div class="card" style="width: 16rem;">
+                        <img src="asset/img/LWH.jpeg" class="card-img-top" alt="..." />
+                        <div class="card-body text-center">
+                            <p class="card-text fw-bold">Moch Dira Issyari</p>
+                            <p class="card-text">Fullstack</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center row py-3">
+        <h1 class="text-center">My Project</h1>
+        <div class="row g-3" id="contents">
+            {{#each data}}
+            <div class="d-flex align-items-center justify-content-center col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{this.image}}" class="card-img-top" alt="..." style="width: 100%; height:13rem;" />
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.title}}</h5>
+                        <p class="text-secondary">Durasi : {{this.durasi}}</p>
+                        <p class="card-text">{{this.content}}</p>
+                        <div class="fs-2 mb-2">
+
+                            {{#if this.java}}
+                            <i class="fa-brands fa-java"></i>
+                            {{/if}}
+
+                            {{#if this.playstore}}
+                            <i class="fa-brands fa-google-play"></i>
+                            {{/if}}
+
+                            {{#if this.android}}
+                            <i class="fa-brands fa-android"></i>
+                            {{/if}}
+
+                            {{#if this.playstation}}
+                            <i class="fa-brands fa-playstation"></i>
+                            {{/if}}
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <a href="#" class="btn btn-dark w-100">Delete</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="btn btn-dark w-100">Update</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
