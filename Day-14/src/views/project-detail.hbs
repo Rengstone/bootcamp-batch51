@@ -1,0 +1,79 @@
+<html>
+
+<head>
+
+    <title>Personal Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                <img src="/asset/img/brand.png" alt="" width="50px" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" aria-current="page" href="/project">Add
+                            Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" aria-current="page" href="/testimonial">Testimonal</a>
+                    </li>
+                </ul>
+
+                <a href="/contact" class="btn btn-dark px-3" style="border-radius: 20px;">contact me</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Section End -->
+    <div class="detail-project py-5" style="background-color: #e3e7eb;">
+        <div class="container">
+
+            <div class="row mb-5">
+                <h1 class="text-center">{{data.name}}</h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="/asset/img/code.jpg" alt="" width="700px" height="400px">
+                </div>
+                <div class="col">
+                    <h4>Duration</h4>
+                    <p><i class="fa-solid fa-calendar-days"></i> {{data.start_date}} - {{data.end_date}}</p>
+                    <p><i class="fa-regular fa-clock"></i> {{data.duration}}</p>
+
+                    <h4>Technologies</h4>
+                    {{#each data.technologies}}
+                    <i class="{{ this }} fs-2"></i>
+                    {{/each}}
+                </div>
+            </div>
+
+            <div class="row">
+                <p>{{data.description}}</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
