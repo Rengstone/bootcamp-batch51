@@ -202,11 +202,10 @@ async function detailProject(req, res){
 
 function logout(req, res) {
 
-    // req.session.destroy()
-    req.session.reload((err) => {
-        req.flash('success', 'Berhasil logout')
-        res.redirect('/login')
-    })
+    req.session.isLogin = false
+    req.session.user = {}
+    req.flash('success', 'Anda berhasil logout')
+    res.redirect('/login')
 
 }
 
